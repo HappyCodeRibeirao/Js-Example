@@ -2,28 +2,18 @@
 <html>
 <head>
 <script>
-function whichElement(e) {
-    var targ;
-    if (!e) {
-        var e = window.event;
-    }
-    if (e.target) {
-        targ=e.target;
-    } else if (e.srcElement) {
-        targ=e.srcElement;
-    }
-    var tname;
-    tname = targ.tagName;
-    alert("You clicked on a " + tname + " element.");
-}
+    document.getElementById("present").onclick = function(){
+       document.getElementById("present").style.display = "nona"; 
+        alert("You clicked on a " + tname + " element.");
+    };
 </script>
 </head>
 <body onmousedown="whichElement(event)">
 
 <p>Click somewhere in the document. An alert box will alert the name of the element you clicked on.</p>
 <h3>Hello Parents please click me!</h3>
-<img src="https://i.giphy.com/media/26tPapNnbxXhRDlyU/giphy.webp" width="300" height="300" frameBorder="0"  ></img><p></p>
-<img src="http://www.reactiongifs.com/wp-content/uploads/2012/03/fez_I_love_you.gif" width="300" height="300" frameBorder="0" style="display: none;"></img><p></p>
+<img src="https://i.giphy.com/media/26tPapNnbxXhRDlyU/giphy.webp" width="300" height="300" frameBorder="0"  id="present"></img><p></p>
+<img src="http://www.reactiongifs.com/wp-content/uploads/2012/03/fez_I_love_you.gif" id="love-you" width="300" height="300" frameBorder="0" style="display: none;"></img><p></p>
     
 <p>This is a paragraph.</p>
 
